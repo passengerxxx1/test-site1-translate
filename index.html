@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lex Casino: Il casinò online più popolare in Italia</title>
+
+  <!-- Абсолютный путь, чтобы работало в /it/ /en/ /es/ -->
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#">
+        <!-- Абсолютный путь, чтобы работало в /it/ /en/ /es/ -->
+        <img class="brand-logo" src="/img/logo.png" alt="Lex Casino" />
+      </a>
+
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="#casino">Lex Casino</a>
+        <a href="#app">App mobile</a>
+        <a href="#promo">Promozioni</a>
+        <a href="#games">Giochi</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-selector">
+          <button class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="flag" aria-hidden="true">🇮🇹</span>
+            <span class="lang-label">Italiano</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </button>
+
+          <ul class="lang-menu" role="listbox" aria-label="Seleziona lingua">
+            <li class="lang-option is-active"
+                role="option"
+                aria-selected="true"
+                data-code="it"
+                data-href="/"
+                data-label="Italiano"
+                data-flag="🇮🇹">
+              <span class="flag" aria-hidden="true">🇮🇹</span><span>Italiano</span>
+            </li>
+
+            <li class="lang-option"
+                role="option"
+                data-code="es"
+                data-href="/es/"
+                data-label="Español"
+                data-flag="🇪🇸">
+              <span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span>
+            </li>
+
+            <li class="lang-option"
+                role="option"
+                data-code="de"
+                data-href="/de/"
+                data-label="Deutsch"
+                data-flag="🇩🇪">
+              <span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span>
+            </li>
+
+            <li class="lang-option"
+                role="option"
+                data-code="ro"
+                data-href="/ro/"
+                data-label="Română"
+                data-flag="🇷🇴">
+              <span class="flag" aria-hidden="true">🇷🇴</span><span>Română</span>
+            </li>
+          </ul>
+        </div>
+
+        <a class="btn btn-ghost" href="#login" aria-label="Accedi">Accedi</a>
+        <a class="btn btn-gold" href="#signup">Registrati</a>
+      </div>
+
+      <button class="burger" type="button" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="casino" aria-label="Hero principale">
+      <div class="hero-bg" role="img" aria-label="Sfondo decorativo"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-panel">
+          <h1>Lex Casino: Il casinò online più popolare in Italia</h1>
+
+          <a class="btn btn-gold btn-wide" href="#play">Gioca</a>
+
+          <p>
+            Lex Casino è una delle piattaforme di gioco d’azzardo più affidabili sul mercato. Gestito da un operatore
+            con licenza europea, offre un’ampia selezione di slot, giochi da tavolo e tornei live. La crittografia SSL
+            protegge i dati, mentre le opzioni di pagamento sicure garantiscono depositi istantanei e prelievi rapidi.
+          </p>
+
+          <p>
+            Tutti i giochi provengono da fornitori leader e sono testati da revisori indipendenti. Il bonus di benvenuto
+            è generoso e le promozioni settimanali mantengono l’esperienza sempre interessante. La politica di gioco
+            responsabile assicura requisiti di scommessa equi.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-decor" aria-hidden="true"></div>
+    </section>
+
+    <section class="index-block" id="promo">
+      <div class="container index-inner">
+        <h2>Indice</h2>
+
+        <ol class="index-list">
+          <li><a href="#s1">Sicurezza e legalità di Lex Casino</a></li>
+          <li><a href="#s2">Come registrarsi al casinò online</a></li>
+          <li><a href="#s3">Catalogo giochi disponibile</a></li>
+          <li><a href="#s4">App mobile di Lex Casino</a></li>
+          <li><a href="#s5">Programma bonus</a></li>
+          <li><a href="#s6">Depositi e prelievi</a></li>
+          <li><a href="#s7">Limiti di gioco responsabile</a></li>
+          <li><a href="#s8">Supporto clienti</a></li>
+          <li><a href="#s9">Domande frequenti</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="content" id="games">
+      <div class="container">
+        <h2>Selezione di giochi e promozioni</h2>
+        <p>
+          Slot classiche, titoli Megaways, tavoli live e giochi con jackpot: la libreria di Lex Casino copre tutte le
+          preferenze, con RTP trasparente e filtri per trovare rapidamente i titoli migliori.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="y"></span> Lex Casino</span>
+      <a href="#privacy">Privacy</a>
+      <a href="#terms">Termini</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav");
+    burger?.addEventListener("click", () => {
+      nav.classList.toggle("nav--open");
+      burger.classList.toggle("burger--open");
+    });
+
+    const langSelector = document.querySelector(".lang-selector");
+    const langToggle = document.querySelector(".lang-toggle");
+    const langMenu = document.querySelector(".lang-menu");
+    const langLabel = document.querySelector(".lang-label");
+    const langFlag = langToggle?.querySelector(".flag");
+
+    const setLang = (label, flag) => {
+      langLabel.textContent = label;
+      if (langFlag) langFlag.textContent = flag;
+
+      langMenu?.querySelectorAll(".lang-option").forEach((opt) => {
+        const active = opt.dataset.label === label;
+        opt.classList.toggle("is-active", active);
+        opt.setAttribute("aria-selected", active ? "true" : "false");
+      });
+    };
+
+    const closeLangMenu = () => {
+      langSelector?.classList.remove("is-open");
+      langToggle?.setAttribute("aria-expanded", "false");
+    };
+
+    langToggle?.addEventListener("click", () => {
+      const willOpen = !langSelector?.classList.contains("is-open");
+      langSelector?.classList.toggle("is-open");
+      langToggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    });
+
+    // Выбор языка -> ПЕРЕХОД в / /es/ /de/ /ro/
+    langMenu?.addEventListener("click", (event) => {
+      const target = event.target.closest(".lang-option");
+      if (!target) return;
+
+      const { label, flag, href } = target.dataset;
+
+      if (label && flag) setLang(label, flag);
+      closeLangMenu();
+
+      if (href) window.location.href = href;
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!langSelector?.classList.contains("is-open")) return;
+      if (!langSelector.contains(event.target)) closeLangMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeLangMenu();
+    });
+
+    // Автовыбор языка по URL (/ /es/, /de/, /ro/)
+    (() => {
+      const seg = (location.pathname.split("/")[1] || "it").toLowerCase();
+      const map = {
+        it: { label: "Italiano", flag: "🇮🇹" },
+        es: { label: "Español", flag: "🇪🇸" },
+        de: { label: "Deutsch", flag: "🇩🇪" },
+        ro: { label: "Română", flag: "🇷🇴" },
+      };
+      const cur = map[seg] || map.it;
+      setLang(cur.label, cur.flag);
+    })();
+  </script>
+</body>
+</html>
